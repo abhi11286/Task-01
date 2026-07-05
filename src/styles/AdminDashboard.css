@@ -1,0 +1,550 @@
+.admin-dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #262626; /* Charcoal background as in Figma */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styling - Left Navigation Rail */
+.admin-sidebar {
+  width: 240px;
+  background-color: #000000; /* Solid Black */
+  display: flex;
+  flex-direction: column;
+  padding: 30px 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+}
+
+.admin-sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.admin-sidebar-logo-circle {
+  background: white;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-gold);
+  margin-bottom: 12px;
+}
+
+.admin-sidebar-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.admin-sidebar-greeting {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.admin-sidebar-greeting span {
+  color: var(--color-gold);
+}
+
+.admin-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 18px;
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.admin-nav-item:hover, .admin-nav-item.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.admin-nav-item.active {
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 8px 8px 0;
+}
+
+.admin-sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 20px;
+}
+
+/* Main Content Section */
+.admin-main-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Dashboard Top Header */
+.admin-header {
+  height: 70px;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.admin-welcome-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.admin-welcome-text span {
+  color: var(--color-gold);
+}
+
+.admin-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-bell-btn {
+  background: none;
+  border: none;
+  color: var(--color-accent-blue);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.admin-bell-btn:hover {
+  transform: scale(1.1);
+}
+
+.admin-bell-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444;
+  border-radius: 50%;
+}
+
+.admin-profile-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Content Body */
+.admin-content-body {
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Stats Cards Grid - Curved layout matching Figma */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.admin-stat-card {
+  background-color: #000000; /* Figma solid black stat cards */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 28px; /* High rounding as in Figma */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.admin-stat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.admin-stat-icon-wrapper {
+  color: var(--color-gold);
+}
+
+.admin-stat-label {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.admin-stat-number {
+  font-size: 3.5rem; /* Large display value */
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* Stats Footer sub-row */
+.admin-substats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-substat-box {
+  text-align: center;
+}
+
+.admin-substat-title {
+  font-size: 0.75rem;
+  color: var(--color-text-gray);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.admin-substat-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.admin-substat-value.gold {
+  color: var(--color-gold);
+}
+
+.admin-substat-value.blue {
+  color: var(--color-accent-blue);
+}
+
+/* Action Control Bar */
+.admin-action-bar {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-action-bar-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.admin-action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.admin-primary-action-btn {
+  background-color: var(--color-gold);
+  color: #000000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-primary-action-btn:hover {
+  background-color: var(--color-gold-hover);
+  transform: translateY(-1px);
+}
+
+.admin-primary-action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Recent Bookings Queue Table */
+.admin-table-container {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.admin-table-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.admin-table-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.admin-table-view-all {
+  background: none;
+  border: none;
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Custom waiting queue table */
+.admin-queue-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-queue-table th {
+  padding: 12px 16px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-text-gray);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.admin-queue-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  font-size: 0.9rem;
+}
+
+/* Customer cell with Avatar */
+.admin-user-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.admin-user-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.admin-service-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-service-icon {
+  color: var(--color-gold);
+}
+
+/* Status Badges */
+.admin-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.admin-badge.serving {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.admin-badge.waiting {
+  background-color: rgba(234, 179, 8, 0.1);
+  color: #eab308;
+  border: 1px solid rgba(234, 179, 8, 0.2);
+}
+
+.admin-badge.completed {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.admin-badge.cancelled {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Table action buttons */
+.admin-table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-table-action-btn {
+  background: none;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-table-action-btn.complete {
+  color: #22c55e;
+}
+
+.admin-table-action-btn.complete:hover {
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.admin-table-action-btn.cancel {
+  color: #ef4444;
+}
+
+.admin-table-action-btn.cancel:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Quick Action Seating Box - Figma design */
+.admin-quick-action-box {
+  background-color: #000000;
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.admin-quick-action-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.admin-quick-action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.admin-quick-pill-btn {
+  background-color: #4f80e1; /* Figma Blue Pill Button */
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  height: 48px;
+  padding: 0 40px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 180px;
+  box-shadow: 0 4px 15px rgba(79, 128, 225, 0.3);
+}
+
+.admin-quick-pill-btn:hover:not(:disabled) {
+  background-color: #3f6ec9;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 20px rgba(79, 128, 225, 0.5);
+}
+
+.admin-quick-pill-btn:disabled {
+  background-color: #2a2a2a;
+  color: #555555;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* General Layout helpers */
+.empty-queue-message {
+  padding: 30px;
+  text-align: center;
+  color: var(--color-text-gray);
+  font-style: italic;
+}
+
+/* Responsive Grid layouts */
+@media (max-width: 950px) {
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .admin-dashboard-layout {
+    flex-direction: column;
+  }
+  .admin-sidebar {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-quick-action-buttons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .admin-quick-pill-btn {
+    width: 100%;
+  }
+  .admin-header {
+    padding: 0 20px;
+  }
+}

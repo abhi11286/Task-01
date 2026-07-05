@@ -1,0 +1,6 @@
+{
+  "name": "Happy Happy Saloon",
+  "description": "Smart Barber Queue Management System to eliminate physical waiting queues.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

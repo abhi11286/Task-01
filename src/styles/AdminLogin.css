@@ -1,0 +1,137 @@
+.login-container {
+  min-height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 500px;
+  background-color: #050505;
+  border: 1px solid #e5b842;
+  border-radius: 4px; /* Figma sharp style card border */
+  padding: 50px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(229, 184, 66, 0.05);
+  text-align: center;
+}
+
+.login-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e5b842;
+  margin-bottom: 35px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  text-align: left;
+}
+
+.login-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.login-input {
+  background-color: #e5b842;
+  border: none;
+  border-radius: 12px; /* Figma Rounded Yellow Pills */
+  height: 48px;
+  padding: 0 20px;
+  font-size: 1rem;
+  color: #000000;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.login-input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+  background-color: #f1ca64;
+}
+
+.login-input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.login-btn-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-btn {
+  background-color: #f5df9c; /* Figma lighter gold button */
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  padding: 12px 45px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.login-btn:hover {
+  background-color: #e5b842;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(229, 184, 66, 0.2);
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-back-link {
+  display: inline-block;
+  margin-top: 25px;
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.login-back-link:hover {
+  color: #e5b842;
+}
+
+.login-credentials-tip {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: rgba(229, 184, 66, 0.05);
+  border: 1px dashed rgba(229, 184, 66, 0.2);
+  text-align: left;
+}
+
+.login-credentials-tip p {
+  margin: 4px 0;
+  font-size: 0.75rem;
+  color: #b3b3b3;
+}
+
+.login-credentials-tip strong {
+  color: #e5b842;
+}

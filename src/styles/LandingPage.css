@@ -1,0 +1,207 @@
+/* Luxury Gold, Black, and White theme variables */
+:root {
+  --color-gold: #e5b842;
+  --color-gold-hover: #f1ca64;
+  --color-gold-light: #fbe093;
+  --color-bg-dark: #121212;
+  --color-card-dark: #1e1e1e;
+  --color-text-white: #ffffff;
+  --color-text-gray: #b3b3b3;
+  --color-accent-blue: #4f80e1;
+  --color-accent-blue-hover: #6794f3;
+}
+
+.landing-container {
+  min-height: 100vh;
+  background-color: var(--color-bg-dark);
+  background-image: radial-gradient(circle at 10% 20%, rgba(30, 30, 30, 0.4) 0%, rgba(10, 10, 10, 0.8) 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: var(--color-text-white);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background elements imitating Figma */
+.landing-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  opacity: 0.15;
+  background-image: radial-gradient(var(--color-gold) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.landing-scissors-decor {
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  font-size: 300px;
+  color: var(--color-gold);
+  opacity: 0.05;
+  transform: rotate(-30deg);
+  pointer-events: none;
+}
+
+.landing-card {
+  background: linear-gradient(135deg, #1c1c1c 0%, #0c0c0c 100%);
+  border: 1px solid rgba(229, 184, 66, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 15px rgba(229, 184, 66, 0.1);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+/* Figma decorative circles and stars */
+
+.landing-logo-container {
+  background: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--color-gold);
+  box-shadow: 0 0 20px rgba(229, 184, 66, 0.4);
+  margin-bottom: 25px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.landing-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.landing-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-white);
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+.landing-title span {
+  color: var(--color-gold);
+}
+
+.landing-options {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.landing-option-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px 25px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.landing-option-row:hover {
+  background: rgba(229, 184, 66, 0.04);
+  border-color: rgba(229, 184, 66, 0.3);
+  transform: translateY(-2px);
+}
+
+.landing-option-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--color-text-white);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.landing-btn {
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.landing-btn-admin {
+  background-color: var(--color-accent-blue);
+  color: white;
+}
+
+.landing-btn-admin:hover {
+  background-color: var(--color-accent-blue-hover);
+  box-shadow: 0 0 10px rgba(79, 128, 225, 0.4);
+}
+
+.landing-btn-token {
+  background-color: var(--color-gold);
+  color: #000;
+}
+
+.landing-btn-token:hover {
+  background-color: var(--color-gold-hover);
+  box-shadow: 0 0 12px rgba(229, 184, 66, 0.4);
+}
+
+.landing-footer {
+  font-size: 0.75rem;
+  color: var(--color-text-gray);
+  line-height: 1.6;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  width: 100%;
+}
+
+.landing-footer p {
+  margin: 2px 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 600px) {
+  .landing-card {
+    padding: 35px 20px;
+  }
+  .landing-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .landing-option-row {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px 15px;
+  }
+  .landing-option-text {
+    text-align: center;
+  }
+}
