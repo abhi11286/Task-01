@@ -208,6 +208,15 @@ This project demonstrates practical implementation of:
 * CRUD operations
 * Client-server architecture
 
+#Screenshots
+
+<img width="1897" height="912" alt="Screenshot 2026-07-05 195211" src="https://github.com/user-attachments/assets/2b213ae1-41e8-4fa1-a26d-e445937eb303" />
+
+<img width="1897" height="907" alt="Screenshot 2026-07-05 195330" src="https://github.com/user-attachments/assets/aa34a123-5b88-4fd3-8065-266a03f1f040" />
+
+<img width="1892" height="900" alt="Screenshot 2026-07-05 195433" src="https://github.com/user-attachments/assets/0bf6b3f3-14ec-4f14-8be9-d8e0fb450fba" />
+
+
 ---
 
 # Developed By
